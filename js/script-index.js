@@ -8,9 +8,15 @@ $(document).ready( function(){
 $(document).ready(function() {
 	$(".js-back").hide(function() {
 
-	});
-	
+	});	
 });
+
+function printNews() {
+	$('#nuevas-recetas').html('NUEVAS RECETAS');
+};
+
+printNews();
+
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
