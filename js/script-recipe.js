@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	$(".js-menu").hide(function() {
-
-	});
+	$(".js-menu").hide();
 	
 });
