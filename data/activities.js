@@ -8,3 +8,4 @@ var activities = [
       place: 'SoMA, San Francisco'
     }
 ];
+

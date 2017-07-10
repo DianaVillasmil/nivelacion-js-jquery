@@ -5,6 +5,12 @@ $(document).ready( function(){
 
 });
 
+$(document).ready(function() {
+	$(".js-back").hide(function() {
+
+	});
+	
+});
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
