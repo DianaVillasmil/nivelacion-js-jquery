@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
-	renderHighlightedRecipes(recipesArray)
-
+	renderHighlightedRecipes(recipesArray);
+	renderActivities(activitiesArray);
+	printNews();
 });
 
 $(document).ready(function () {
@@ -13,7 +14,7 @@ function printNews() {
 	$('#nuevas-recetas').html('NUEVAS RECETAS');
 };
 
-printNews();
+
 
 
 /*
@@ -67,6 +68,10 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+	activitiesArray.forEach((activity) => {
+		renderActivity(activity);
+	});
+	if (activitiesArray.length > 0) $('.wrapper-message').hide();
 }
 
 /*
@@ -74,7 +79,7 @@ function renderActivities(activitiesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
+function renderActivity(activity) {
 
 }
 
