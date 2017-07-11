@@ -1,12 +1,12 @@
-$(document).ready( function(){
+$(document).ready(function () {
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray)
 
 });
 
-$(document).ready(function() {
-	$(".js-back").hide();	
+$(document).ready(function () {
+	$(".js-back").hide();
 });
 
 function printNews() {
@@ -23,14 +23,13 @@ printNews();
 function renderHighlightedRecipes(recipesArray) {
 
 	recipesArray.forEach((recipe) => {
-			if (recipe.highlighted) renderRecipe(recipe);
-
-		});
+		if (recipe.highlighted) renderRecipe(recipe);
+	});
 
 	console.log('Recipes: ', recipesArray);
 
-	};
-	
+};
+
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
@@ -40,6 +39,25 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+
+	var html = `
+	<a class="item-recipe" href="#">
+	<span class="attribution">
+		<span class="title-recipe"> ${recipe.title} </span>
+		<span class="metadata-recipe">
+		<span class="author-recipe"> ${recipe.source.name} </span>
+		<span class="bookmarks-recipe">
+			<span class="icon-bookmark"></span> 
+		</span>
+		</span>
+	</span>
+
+	<img src="img/recipes/640x800/${recipe.name}.jpg" />
+	</a>
+	`;
+
+	$('.list-recipes').append(html);
+
 }
 
 
@@ -57,7 +75,7 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	
+
 }
 
 
