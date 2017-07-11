@@ -11,5 +11,11 @@ $(document).ready(function() {
 		$('a.js-show-make').addClass('active');
 		$('a.js-show-recipe').removeClass('active');
 	});	
+
+
+	$('.js-back').click(function(){
+		parent.history.back(); 
+		return false;							   
+	});
 });
 
